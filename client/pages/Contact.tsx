@@ -311,7 +311,7 @@ export default function Contact() {
                         disabled={isSubmitting}
                         className="w-full"
                       >
-                        {isSubmitting ? "Submitting..." : "Submit Your Challenge"}
+                        {isSubmitting ? "Submitting..." : "Start Automation Discussion"}
                       </Button>
 
                       <p className="text-xs text-foreground/50 text-center">
