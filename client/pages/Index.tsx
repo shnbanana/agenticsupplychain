@@ -234,15 +234,15 @@ export default function Index() {
       <section className="py-20 md:py-32 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Business?
+            Automate Your Supply Chain at Scale
           </h2>
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-            Share your most pressing challenge. We'll listen, assess, and propose a clear path
-            forward to achieve your transformation goals.
+            Share your biggest supply chain challenge. We'll assess the opportunity and propose
+            a roadmap to automate and optimize end-to-end.
           </p>
           <Button asChild size="lg" variant="secondary" className="gap-2">
             <Link to="/contact">
-              Tell Us Your Problem
+              Let's Talk Supply Chain
               <ArrowRight className="w-4 h-4" />
             </Link>
           </Button>
