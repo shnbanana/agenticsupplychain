@@ -151,13 +151,13 @@ export default function Contact() {
                 <Card className="border-accent/20 bg-accent/5">
                   <CardContent className="pt-12 pb-12 text-center">
                     <CheckCircle className="w-16 h-16 text-accent mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Got It!</h3>
                     <p className="text-foreground/70 mb-2">
-                      We've received your submission and will review it carefully.
+                      We've received your supply chain challenge and will review it right away.
                     </p>
                     <p className="text-foreground/60">
-                      Our team will reach out within 24 hours to discuss next steps and explore how
-                      we can help you achieve your transformation goals.
+                      Our supply chain experts will reach out within 24 hours to understand your
+                      situation and propose an automation roadmap tailored to your operation.
                     </p>
                   </CardContent>
                 </Card>
