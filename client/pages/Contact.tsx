@@ -67,11 +67,11 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Tell Us Your Challenge
+              Let's Automate Your Supply Chain
             </h1>
             <p className="text-lg text-foreground/60">
-              Share what's keeping you up at night. We'll listen, assess, and propose a clear
-              path forward to achieve your transformation goals.
+              Share your biggest supply chain challenge. We'll assess the opportunity, identify
+              quick wins, and propose an automation roadmap to deliver real outcomes.
             </p>
           </div>
         </div>
