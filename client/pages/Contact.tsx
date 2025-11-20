@@ -1,0 +1,390 @@
+import { useState } from "react";
+import { Layout } from "@/components/Layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { CheckCircle, Mail, Phone, MapPin } from "lucide-react";
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  company: z.string().min(2, "Company name is required"),
+  industry: z.string().min(1, "Please select an industry"),
+  challenge: z.string().min(20, "Please describe your challenge in detail (at least 20 characters)"),
+  budget: z.string().min(1, "Please select a budget range"),
+  timeline: z.string().min(1, "Please select a timeline"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
+export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      console.log("Form submitted:", data);
+      setSubmitted(true);
+      reset();
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+  const industries = [
+    "Financial Services",
+    "Healthcare",
+    "Retail & E-Commerce",
+    "Manufacturing",
+    "Technology",
+    "Insurance",
+    "Government & Public Sector",
+    "Education",
+    "Other",
+  ];
+
+  const budgetRanges = ["$50K - $150K", "$150K - $300K", "$300K - $750K", "$750K+"];
+  const timelines = ["Immediate (0-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"];
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-primary/5 via-white to-white py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Tell Us Your Challenge
+            </h1>
+            <p className="text-lg text-foreground/60">
+              Share what's keeping you up at night. We'll listen, assess, and propose a clear
+              path forward to achieve your transformation goals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-20 md:py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Contact Info */}
+            <div className="lg:col-span-1">
+              <div className="space-y-8">
+                <Card className="border-border/50">
+                  <CardHeader>
+                    <CardTitle>Contact Information</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="flex gap-4">
+                      <Mail className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Email</p>
+                        <a
+                          href="mailto:hello@transformai.com"
+                          className="text-foreground/70 hover:text-primary transition-colors"
+                        >
+                          hello@transformai.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Phone</p>
+                        <a
+                          href="tel:+14155551234"
+                          className="text-foreground/70 hover:text-primary transition-colors"
+                        >
+                          +1 (415) 555-1234
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold text-foreground mb-1">Location</p>
+                        <p className="text-foreground/70">
+                          San Francisco, CA
+                          <br />
+                          New York, NY
+                          <br />
+                          Remote
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-accent/20 bg-accent/5">
+                  <CardHeader>
+                    <CardTitle className="text-base">Response Time</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-foreground/70 text-sm">
+                      We typically respond to inquiries within 24 hours. For urgent matters, feel
+                      free to call us directly.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Form */}
+            <div className="lg:col-span-2">
+              {submitted ? (
+                <Card className="border-accent/20 bg-accent/5">
+                  <CardContent className="pt-12 pb-12 text-center">
+                    <CheckCircle className="w-16 h-16 text-accent mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
+                    <p className="text-foreground/70 mb-2">
+                      We've received your submission and will review it carefully.
+                    </p>
+                    <p className="text-foreground/60">
+                      Our team will reach out within 24 hours to discuss next steps and explore how
+                      we can help you achieve your transformation goals.
+                    </p>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card className="border-border/50">
+                  <CardHeader>
+                    <CardTitle>Share Your Challenge</CardTitle>
+                    <CardDescription>
+                      Help us understand your situation so we can provide the best guidance.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                      {/* Name & Email Row */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-semibold text-foreground mb-2">
+                            Your Name *
+                          </label>
+                          <Input
+                            placeholder="John Smith"
+                            {...register("name")}
+                            className={errors.name ? "border-red-500" : ""}
+                          />
+                          {errors.name && (
+                            <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                          )}
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold text-foreground mb-2">
+                            Email Address *
+                          </label>
+                          <Input
+                            type="email"
+                            placeholder="john@company.com"
+                            {...register("email")}
+                            className={errors.email ? "border-red-500" : ""}
+                          />
+                          {errors.email && (
+                            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Company & Industry Row */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-semibold text-foreground mb-2">
+                            Company Name *
+                          </label>
+                          <Input
+                            placeholder="Your Company Inc."
+                            {...register("company")}
+                            className={errors.company ? "border-red-500" : ""}
+                          />
+                          {errors.company && (
+                            <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>
+                          )}
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold text-foreground mb-2">
+                            Industry *
+                          </label>
+                          <select
+                            {...register("industry")}
+                            className={`w-full h-10 px-3 rounded-md border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent ${
+                              errors.industry ? "border-red-500" : "border-input"
+                            }`}
+                            defaultValue=""
+                          >
+                            <option value="">Select your industry</option>
+                            {industries.map((industry) => (
+                              <option key={industry} value={industry}>
+                                {industry}
+                              </option>
+                            ))}
+                          </select>
+                          {errors.industry && (
+                            <p className="text-red-500 text-sm mt-1">{errors.industry.message}</p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Challenge */}
+                      <div>
+                        <label className="block text-sm font-semibold text-foreground mb-2">
+                          Describe Your Challenge *
+                        </label>
+                        <Textarea
+                          placeholder="What's your biggest challenge right now? What's keeping you up at night? We're interested in understanding the business impact, not just the technical problem."
+                          className={`min-h-40 ${errors.challenge ? "border-red-500" : ""}`}
+                          {...register("challenge")}
+                        />
+                        {errors.challenge && (
+                          <p className="text-red-500 text-sm mt-1">{errors.challenge.message}</p>
+                        )}
+                      </div>
+
+                      {/* Budget & Timeline Row */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-semibold text-foreground mb-2">
+                            Budget Range *
+                          </label>
+                          <select
+                            {...register("budget")}
+                            className={`w-full h-10 px-3 rounded-md border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent ${
+                              errors.budget ? "border-red-500" : "border-input"
+                            }`}
+                            defaultValue=""
+                          >
+                            <option value="">Select a range</option>
+                            {budgetRanges.map((range) => (
+                              <option key={range} value={range}>
+                                {range}
+                              </option>
+                            ))}
+                          </select>
+                          {errors.budget && (
+                            <p className="text-red-500 text-sm mt-1">{errors.budget.message}</p>
+                          )}
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold text-foreground mb-2">
+                            Timeline *
+                          </label>
+                          <select
+                            {...register("timeline")}
+                            className={`w-full h-10 px-3 rounded-md border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent ${
+                              errors.timeline ? "border-red-500" : "border-input"
+                            }`}
+                            defaultValue=""
+                          >
+                            <option value="">Select a timeline</option>
+                            {timelines.map((timeline) => (
+                              <option key={timeline} value={timeline}>
+                                {timeline}
+                              </option>
+                            ))}
+                          </select>
+                          {errors.timeline && (
+                            <p className="text-red-500 text-sm mt-1">{errors.timeline.message}</p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Submit Button */}
+                      <Button
+                        type="submit"
+                        size="lg"
+                        disabled={isSubmitting}
+                        className="w-full"
+                      >
+                        {isSubmitting ? "Submitting..." : "Submit Your Challenge"}
+                      </Button>
+
+                      <p className="text-xs text-foreground/50 text-center">
+                        We respect your privacy. Your information will only be used to contact you
+                        about your challenge and potential next steps.
+                      </p>
+                    </form>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-32 bg-primary/5">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div>
+              <h3 className="font-bold text-foreground mb-2">How long is the initial consultation?</h3>
+              <p className="text-foreground/70 text-sm">
+                Our initial consultations are typically 30-60 minutes. We'll explore your
+                challenge, understand your context, and discuss potential approaches.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-2">What does a typical engagement look like?</h3>
+              <p className="text-foreground/70 text-sm">
+                Most engagements start with a 2-4 week discovery phase to define scope and
+                approach, followed by implementation lasting 3-12 months depending on complexity.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-2">Do you work with companies of all sizes?</h3>
+              <p className="text-foreground/70 text-sm">
+                Yes! We work with startups, mid-market companies, and enterprises. Our minimum
+                engagement is typically $50K, but we're flexible for the right fit.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-2">Can you work with our existing vendors?</h3>
+              <p className="text-foreground/70 text-sm">
+                Absolutely. We often work with existing technology vendors and service providers
+                to ensure seamless integration with your current systems.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-2">What's your approach to vendor selection?</h3>
+              <p className="text-foreground/70 text-sm">
+                We're vendor-agnostic and recommend solutions based purely on what's best for
+                your specific needs, not relationships or partnerships.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-foreground mb-2">How do you measure success?</h3>
+              <p className="text-foreground/70 text-sm">
+                We establish clear, measurable success metrics upfront. We track progress
+                rigorously and report on outcomes throughout the engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
