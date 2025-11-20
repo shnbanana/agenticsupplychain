@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp, Clock, DollarSign, Users } from "lucide-react";
+import { InternationalLogisticsIllustration, FulfillmentIllustration, LastMileDeliveryIllustration } from "@/components/SupplyChainIllustrations";
 
 export default function CaseStudies() {
   const caseStudies = [
