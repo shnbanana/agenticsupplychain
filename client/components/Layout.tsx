@@ -12,7 +12,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
               <span className="text-white font-bold text-lg">T</span>
             </div>
             <span className="font-bold text-lg text-primary hidden sm:inline">
-              Transform AI
+              Transformity
             </span>
           </Link>
 
