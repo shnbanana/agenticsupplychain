@@ -336,50 +336,50 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div>
-              <h3 className="font-bold text-foreground mb-2">How long is the initial consultation?</h3>
+              <h3 className="font-bold text-foreground mb-2">What areas of supply chain do you focus on?</h3>
               <p className="text-foreground/70 text-sm">
-                Our initial consultations are typically 30-60 minutes. We'll explore your
-                challenge, understand your context, and discuss potential approaches.
+                We specialize in international logistics, fulfillment center operations, and
+                middle/last-mile delivery. We also handle supply chain planning and demand forecasting.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-foreground mb-2">What does a typical engagement look like?</h3>
+              <h3 className="font-bold text-foreground mb-2">How long does a typical engagement take?</h3>
               <p className="text-foreground/70 text-sm">
-                Most engagements start with a 2-4 week discovery phase to define scope and
-                approach, followed by implementation lasting 3-12 months depending on complexity.
+                Discovery and assessment: 2-4 weeks. Implementation: 3-12 months depending on
+                complexity and scope. We focus on quick wins while building towards larger transformation.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-foreground mb-2">Do you work with companies of all sizes?</h3>
+              <h3 className="font-bold text-foreground mb-2">Can you work with my existing systems?</h3>
               <p className="text-foreground/70 text-sm">
-                Yes! We work with startups, mid-market companies, and enterprises. Our minimum
-                engagement is typically $50K, but we're flexible for the right fit.
+                Yes. We integrate with WMS, TMS, ERP, and other systems. We're agnostic to your
+                current technology stack and work with what you have.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-foreground mb-2">Can you work with our existing vendors?</h3>
+              <h3 className="font-bold text-foreground mb-2">What's the typical budget for automation?</h3>
               <p className="text-foreground/70 text-sm">
-                Absolutely. We often work with existing technology vendors and service providers
-                to ensure seamless integration with your current systems.
+                Engagements typically range from $75K to $500K+ depending on scope. Most
+                automation delivers ROI within 12-18 months. We discuss budget upfront.
               </p>
             </div>
 
             <div>
-              <h3 className="font-bold text-foreground mb-2">What's your approach to vendor selection?</h3>
+              <h3 className="font-bold text-foreground mb-2">Do you work with different company sizes?</h3>
               <p className="text-foreground/70 text-sm">
-                We're vendor-agnostic and recommend solutions based purely on what's best for
-                your specific needs, not relationships or partnerships.
+                We work with mid-market and enterprise supply chains. Typical client: $100M-$5B revenue
+                with complex supply networks. We're not a good fit for basic operations.
               </p>
             </div>
 
             <div>
               <h3 className="font-bold text-foreground mb-2">How do you measure success?</h3>
               <p className="text-foreground/70 text-sm">
-                We establish clear, measurable success metrics upfront. We track progress
-                rigorously and report on outcomes throughout the engagement.
+                We define clear KPIs upfront: cost reduction, speed improvement, accuracy/quality,
+                labor optimization, or cash flow improvement. We track religiously and report monthly.
               </p>
             </div>
           </div>
