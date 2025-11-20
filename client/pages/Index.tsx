@@ -38,11 +38,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              The Transformation Approach
+              Supply Chain Experts, Automation Specialists
             </h2>
             <p className="text-lg text-foreground/60">
-              We combine strategic thinking, technical expertise, and deep industry knowledge to
-              deliver measurable business outcomes.
+              Deep supply chain expertise combined with at-scale automation implementation.
+              We deliver transformative results that compound over time.
             </p>
           </div>
 
@@ -50,21 +50,21 @@ export default function Index() {
             {[
               {
                 icon: Target,
-                title: "Outcomes-Driven",
+                title: "Supply Chain Expertise",
                 description:
-                  "Every decision is tied to specific, measurable business outcomes. We focus on ROI, not just implementation.",
+                  "We understand international logistics, fulfillment operations, last-mile delivery, and complex supply networks. No learning curve.",
               },
               {
                 icon: Zap,
-                title: "Product-First",
+                title: "Automation at Scale",
                 description:
-                  "We think like product builders, not service providers. Your AI solution is designed to scale and evolve.",
+                  "We don't patch problems—we automate entire processes end-to-end. Our solutions handle real complexity and grow with you.",
               },
               {
                 icon: Users,
-                title: "Transformation Partner",
+                title: "Outcomes-Driven",
                 description:
-                  "We work embedded with your team, sharing knowledge and building capability alongside you.",
+                  "Every automation delivers measurable impact: cost reduction, speed improvement, or risk mitigation. We obsess over your results.",
               },
             ].map((item, idx) => (
               <div key={idx} className="group">
