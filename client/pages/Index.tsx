@@ -175,24 +175,24 @@ export default function Index() {
             {[
               {
                 name: "Sarah Chen",
-                title: "AI Strategy & Transformation Lead",
+                title: "Supply Chain Network Director",
                 experience:
-                  "15+ years in AI/ML, formerly Director at Google Cloud. Led transformation for Fortune 500 companies.",
-                specialties: ["AI Strategy", "Enterprise Transformation", "Change Management"],
+                  "18+ years supply chain operations. Former VP at major logistics provider managing 1000+ facilities globally. Expert in international logistics, customs, and network optimization.",
+                specialties: ["International Logistics", "Network Design", "Cross-Border Ops"],
               },
               {
                 name: "James Rodriguez",
-                title: "Product & Engineering Lead",
+                title: "Automation & Fulfillment Lead",
                 experience:
-                  "Scaled 3 startups to $100M+. 12 years building products at Meta and Amazon. Expert in AI product development.",
-                specialties: ["Product Strategy", "Full-Stack AI", "Technical Architecture"],
+                  "12 years fulfillment automation. Built robotic systems and automation platforms handling 500M+ units/year. Expert in large-scale fulfillment automation.",
+                specialties: ["Fulfillment Automation", "Robotics Integration", "WMS Systems"],
               },
               {
                 name: "Emily Thompson",
-                title: "Operations & Implementation Lead",
+                title: "Last-Mile & Operations Lead",
                 experience:
-                  "10+ years optimizing operations. Led digital transformation across healthcare, finance, and manufacturing.",
-                specialties: ["Process Optimization", "Change Enablement", "Implementation Management"],
+                  "15+ years in last-mile and carrier operations. Led routing and delivery optimization for 3,000+ vehicles across North America.",
+                specialties: ["Last-Mile Delivery", "Route Optimization", "Driver Management"],
               },
             ].map((consultant, idx) => (
               <Card key={idx} className="border-border/50">
