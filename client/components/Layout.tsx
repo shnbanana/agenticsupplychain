@@ -97,8 +97,8 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 
           <div className="border-t border-primary-foreground/20 pt-8">
             <p className="text-sm text-primary-foreground/60 text-center">
-              © 2024 Transform AI. All rights reserved. We partner with organizations
-              to achieve transformative AI outcomes.
+              © 2024 Transformity. All rights reserved. Supply chain automation experts
+              delivering measurable business outcomes.
             </p>
           </div>
         </div>
