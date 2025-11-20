@@ -95,32 +95,32 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {[
               {
-                title: "Financial Services Automation",
-                company: "FinTech Innovation Corp",
-                challenge: "Manual processing consuming 40% of operational budget",
+                title: "Supply Chain Visibility & Optimization",
+                company: "Global Logistics Corp",
+                challenge: "Fragmented supply chain data across 50+ suppliers causing $5M in annual inefficiencies",
+                result: "Real-time supply chain visibility, 28% cost reduction, 40% faster order fulfillment",
+                icon: Zap,
+              },
+              {
+                title: "Financial Services Process Automation",
+                company: "RegionalBank Financial",
+                challenge: "Manual processing consuming 40% of operational budget with high error rates",
                 result: "65% process automation, $2.3M annual savings, 10x faster transaction processing",
                 icon: Briefcase,
               },
               {
-                title: "Healthcare Operations Optimization",
-                company: "Regional Medical Network",
-                challenge: "Patient wait times and administrative overhead reducing care quality",
-                result: "45% reduction in wait times, 70% faster patient scheduling, improved satisfaction scores",
-                icon: CheckCircle,
-              },
-              {
-                title: "Retail Intelligence Platform",
-                company: "E-Commerce Leader",
-                challenge: "Data silos preventing real-time inventory and demand insights",
+                title: "eCommerce Demand & Inventory Intelligence",
+                company: "DTC Fashion Brand",
+                challenge: "Data silos preventing real-time inventory and demand insights across channels",
                 result: "Real-time inventory optimization, 35% reduction in stockouts, 22% revenue increase",
                 icon: Target,
               },
               {
-                title: "Manufacturing Predictive Analytics",
-                company: "Industrial Manufacturing",
-                challenge: "Equipment downtime costing $500K monthly in lost production",
-                result: "92% downtime prediction accuracy, 60% reduction in unplanned outages, $3M+ annual savings",
-                icon: Zap,
+                title: "Supply Chain Demand Forecasting",
+                company: "Consumer Goods Manufacturer",
+                challenge: "Inaccurate demand forecasting causing 30% safety stock waste and stockouts",
+                result: "87% forecast accuracy, 32% reduction in excess inventory, $1.8M annual savings",
+                icon: CheckCircle,
               },
             ].map((caseStudy, idx) => (
               <Card
