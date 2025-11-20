@@ -95,11 +95,11 @@ export default function CaseStudies() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Proven Transformation Results
+              Supply Chain Automation That Works
             </h1>
             <p className="text-lg text-foreground/60">
-              Real outcomes from real organizations across diverse industries. See how we've helped
-              companies achieve measurable business transformations through AI.
+              Real supply chain transformations from real companies. See how Transformity automates
+              international logistics, fulfillment operations, and last-mile delivery at scale.
             </p>
           </div>
         </div>
