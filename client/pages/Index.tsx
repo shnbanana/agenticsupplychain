@@ -84,41 +84,42 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Proven Results Across Industries
+              Supply Chain Transformations in Action
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              See how we've helped organizations achieve significant business transformations through AI.
+              See how we've automated supply chain operations at scale, delivering millions in value
+              across international logistics, fulfillment, and last-mile operations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {[
               {
-                title: "Supply Chain Visibility & Optimization",
-                company: "Global Logistics Corp",
-                challenge: "Fragmented supply chain data across 50+ suppliers causing $5M in annual inefficiencies",
-                result: "Real-time supply chain visibility, 28% cost reduction, 40% faster order fulfillment",
+                title: "International Logistics Network Automation",
+                company: "Global Retailer (500K SKUs, 40+ Countries)",
+                challenge: "Fragmented systems across 50+ suppliers, customs complexity, $8.2M annual waste",
+                result: "Real-time network visibility, 31% cost reduction, 38% faster cross-border fulfillment",
                 icon: Zap,
               },
               {
-                title: "Financial Services Process Automation",
-                company: "RegionalBank Financial",
-                challenge: "Manual processing consuming 40% of operational budget with high error rates",
-                result: "65% process automation, $2.3M annual savings, 10x faster transaction processing",
+                title: "Fulfillment Center Operations Optimization",
+                company: "Omnichannel E-Commerce Leader (10 Facilities)",
+                challenge: "Manual workflows consuming 35% labor budget, 94% picking accuracy, 18-hour fulfillment",
+                result: "67% labor automation, 99.4% accuracy, 6-hour fulfillment, $4.1M annual savings",
                 icon: Briefcase,
               },
               {
-                title: "eCommerce Demand & Inventory Intelligence",
-                company: "DTC Fashion Brand",
-                challenge: "Data silos preventing real-time inventory and demand insights across channels",
-                result: "Real-time inventory optimization, 35% reduction in stockouts, 22% revenue increase",
+                title: "Middle & Last-Mile Delivery Network",
+                company: "Regional Logistics Operator (250+ Vehicles)",
+                challenge: "Fragmented routing, 26% failed deliveries, $12K daily operational waste",
+                result: "99.2% delivery success, 32% route efficiency, $3.6M annual savings",
                 icon: Target,
               },
               {
-                title: "Supply Chain Demand Forecasting",
-                company: "Consumer Goods Manufacturer",
-                challenge: "Inaccurate demand forecasting causing 30% safety stock waste and stockouts",
-                result: "87% forecast accuracy, 32% reduction in excess inventory, $1.8M annual savings",
+                title: "Supply Chain Planning & Demand Intelligence",
+                company: "CPG Manufacturer (2,000+ SKUs)",
+                challenge: "Demand forecasting only 65% accurate, 28% excess safety stock, $2.1M waste",
+                result: "89% forecast accuracy, 30% inventory reduction, $2.8M annual freed working capital",
                 icon: CheckCircle,
               },
             ].map((caseStudy, idx) => (
