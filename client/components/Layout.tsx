@@ -48,9 +48,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">Transform AI</h3>
+              <h3 className="font-bold text-lg mb-4">Transformity</h3>
               <p className="text-sm text-primary-foreground/80">
-                Your transformation partner for AI-driven business outcomes.
+                Supply chain automation experts. We deliver real outcomes through at-scale automation.
               </p>
             </div>
 
