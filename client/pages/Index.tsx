@@ -36,15 +36,20 @@ export default function Index() {
 
       {/* Value Proposition */}
       <section className="py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Supply Chain Experts, Automation Specialists
-            </h2>
-            <p className="text-lg text-foreground/60">
-              Deep supply chain expertise combined with at-scale automation implementation.
-              We deliver transformative results that compound over time.
-            </p>
+        <div className="container mx-auto px-4 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+                Supply Chain Experts, Automation Specialists
+              </h2>
+              <p className="text-lg text-foreground/60">
+                Deep supply chain expertise combined with at-scale automation implementation.
+                We deliver transformative results that compound over time.
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <SupplyChainNetworkIllustration className="w-full h-80" />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
