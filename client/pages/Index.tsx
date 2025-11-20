@@ -105,44 +105,42 @@ export default function Index() {
                 company: "Global Retailer (500K SKUs, 40+ Countries)",
                 challenge: "Fragmented systems across 50+ suppliers, customs complexity, $8.2M annual waste",
                 result: "Real-time network visibility, 31% cost reduction, 38% faster cross-border fulfillment",
-                icon: Zap,
+                illustration: InternationalLogisticsIllustration,
               },
               {
                 title: "Fulfillment Center Operations Optimization",
                 company: "Omnichannel E-Commerce Leader (10 Facilities)",
                 challenge: "Manual workflows consuming 35% labor budget, 94% picking accuracy, 18-hour fulfillment",
                 result: "67% labor automation, 99.4% accuracy, 6-hour fulfillment, $4.1M annual savings",
-                icon: Briefcase,
+                illustration: FulfillmentIllustration,
               },
               {
                 title: "Middle & Last-Mile Delivery Network",
                 company: "Regional Logistics Operator (250+ Vehicles)",
                 challenge: "Fragmented routing, 26% failed deliveries, $12K daily operational waste",
                 result: "99.2% delivery success, 32% route efficiency, $3.6M annual savings",
-                icon: Target,
+                illustration: LastMileDeliveryIllustration,
               },
               {
                 title: "Supply Chain Planning & Demand Intelligence",
                 company: "CPG Manufacturer (2,000+ SKUs)",
                 challenge: "Demand forecasting only 65% accurate, 28% excess safety stock, $2.1M waste",
                 result: "89% forecast accuracy, 30% inventory reduction, $2.8M annual freed working capital",
-                icon: CheckCircle,
+                illustration: SupplyChainNetworkIllustration,
               },
             ].map((caseStudy, idx) => (
               <Card
                 key={idx}
-                className="hover:shadow-lg transition-shadow duration-300 border-border/50"
+                className="hover:shadow-lg transition-shadow duration-300 border-border/50 overflow-hidden flex flex-col"
               >
+                <div className="h-40 bg-gradient-to-b from-primary/5 to-primary/10 overflow-hidden">
+                  <caseStudy.illustration className="w-full h-full" />
+                </div>
                 <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    <div className="flex-1">
-                      <CardTitle className="text-lg">{caseStudy.title}</CardTitle>
-                      <CardDescription className="mt-1">{caseStudy.company}</CardDescription>
-                    </div>
-                    <caseStudy.icon className="w-6 h-6 text-accent flex-shrink-0" />
-                  </div>
+                  <CardTitle className="text-lg">{caseStudy.title}</CardTitle>
+                  <CardDescription className="mt-1">{caseStudy.company}</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 flex-1">
                   <div>
                     <p className="text-sm font-semibold text-foreground/70 mb-1">Challenge</p>
                     <p className="text-sm text-foreground/60">{caseStudy.challenge}</p>
