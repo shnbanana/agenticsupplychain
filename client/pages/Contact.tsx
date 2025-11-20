@@ -244,10 +244,10 @@ export default function Contact() {
                       {/* Challenge */}
                       <div>
                         <label className="block text-sm font-semibold text-foreground mb-2">
-                          Describe Your Challenge *
+                          Describe Your Supply Chain Challenge *
                         </label>
                         <Textarea
-                          placeholder="What's your biggest challenge right now? What's keeping you up at night? We're interested in understanding the business impact, not just the technical problem."
+                          placeholder="What's your biggest supply chain challenge? (e.g., manual processes consuming labor, inventory inefficiency, international logistics complexity, last-mile delivery costs, poor visibility, demand forecasting accuracy, etc.)"
                           className={`min-h-40 ${errors.challenge ? "border-red-500" : ""}`}
                           {...register("challenge")}
                         />
