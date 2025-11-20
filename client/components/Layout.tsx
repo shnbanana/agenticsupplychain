@@ -8,10 +8,8 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     <div className="flex flex-col min-h-screen bg-background">
       <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">T</span>
-            </div>
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Logo className="w-8 h-8" />
             <span className="font-bold text-lg text-primary hidden sm:inline">
               Transformity
             </span>
