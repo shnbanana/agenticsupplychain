@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Layout } from "@/components/Layout";
 import { ArrowRight, CheckCircle, Zap, Target, Users, Briefcase } from "lucide-react";
+import { SupplyChainNetworkIllustration, InternationalLogisticsIllustration, FulfillmentIllustration, LastMileDeliveryIllustration } from "@/components/SupplyChainIllustrations";
 
 export default function Index() {
   return (
