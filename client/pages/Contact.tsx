@@ -133,12 +133,12 @@ export default function Contact() {
 
                 <Card className="border-accent/20 bg-accent/5">
                   <CardHeader>
-                    <CardTitle className="text-base">Response Time</CardTitle>
+                    <CardTitle className="text-base">Next Steps</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-foreground/70 text-sm">
-                      We typically respond to inquiries within 24 hours. For urgent matters, feel
-                      free to call us directly.
+                      We typically respond within 24 hours with initial assessment. We'll then
+                      schedule a focused working session to develop your automation roadmap.
                     </p>
                   </CardContent>
                 </Card>
