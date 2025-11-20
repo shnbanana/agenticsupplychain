@@ -12,12 +12,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl animate-slide-up">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Transform Your Business With AI
+              Supply Chain Automation at Scale
             </h1>
             <p className="text-lg md:text-xl text-foreground/70 mb-8 leading-relaxed">
-              We're not just automation consultants. We're your transformation partner, focused on
-              delivering real outcomes and sustainable competitive advantage through AI-driven
-              innovation.
+              We're supply chain experts obsessed with automation that delivers real business outcomes.
+              We don't just implement tools—we transform how you operate end-to-end, at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="gap-2">
