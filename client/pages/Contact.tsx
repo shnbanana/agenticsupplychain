@@ -46,14 +46,14 @@ export default function Contact() {
   };
 
   const industries = [
-    "Financial Services",
-    "Healthcare",
     "Retail & E-Commerce",
     "Manufacturing",
-    "Technology",
-    "Insurance",
-    "Government & Public Sector",
-    "Education",
+    "3PL / Logistics Provider",
+    "Consumer Goods (CPG)",
+    "Food & Beverage",
+    "Pharmaceutical",
+    "Technology Hardware",
+    "Automotive",
     "Other",
   ];
 
