@@ -198,20 +198,20 @@ export default function CaseStudies() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">50+</p>
-              <p className="text-foreground/60">Successful Projects</p>
+              <p className="text-4xl font-bold text-primary mb-2">40+</p>
+              <p className="text-foreground/60">Supply Chain Projects</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">$150M+</p>
-              <p className="text-foreground/60">Client Value Generated</p>
+              <p className="text-4xl font-bold text-primary mb-2">$280M+</p>
+              <p className="text-foreground/60">Value Delivered</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">12</p>
-              <p className="text-foreground/60">Industries Served</p>
+              <p className="text-4xl font-bold text-primary mb-2">3</p>
+              <p className="text-foreground/60">Core Expertise Areas</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-primary mb-2">95%</p>
-              <p className="text-foreground/60">Client Satisfaction</p>
+              <p className="text-4xl font-bold text-primary mb-2">98%</p>
+              <p className="text-foreground/60">Client Retention</p>
             </div>
           </div>
         </div>
