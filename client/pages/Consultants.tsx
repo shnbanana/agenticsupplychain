@@ -146,12 +146,12 @@ export default function Consultants() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Meet Our Expert Team
+              Supply Chain Experts
             </h1>
             <p className="text-lg text-foreground/60">
-              Seasoned consultants with proven track records from leading technology companies,
-              startups, and consulting firms. Each team member brings unique expertise to ensure
-              your transformation succeeds.
+              The Transformity team combines 150+ years of supply chain expertise. Our consultants
+              have built, scaled, and optimized operations handling 500M+ units annually.
+              Deep knowledge of international logistics, fulfillment, and last-mile delivery.
             </p>
           </div>
         </div>
