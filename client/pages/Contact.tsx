@@ -164,9 +164,9 @@ export default function Contact() {
               ) : (
                 <Card className="border-border/50">
                   <CardHeader>
-                    <CardTitle>Share Your Challenge</CardTitle>
+                    <CardTitle>Share Your Supply Chain Challenge</CardTitle>
                     <CardDescription>
-                      Help us understand your situation so we can provide the best guidance.
+                      Tell us about your biggest supply chain pain point. We'll provide expert guidance.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
