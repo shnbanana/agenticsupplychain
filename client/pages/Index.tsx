@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Layout } from "@/components/Layout";
 import { ArrowRight, CheckCircle, Zap, Target, Users, Briefcase } from "lucide-react";
 import { SupplyChainNetworkIllustration, InternationalLogisticsIllustration, FulfillmentIllustration, LastMileDeliveryIllustration } from "@/components/SupplyChainIllustrations";
+import { AutomationOverlay } from "@/components/AutomationOverlay";
 
 export default function Index() {
   return (
