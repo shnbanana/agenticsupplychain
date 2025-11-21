@@ -56,9 +56,13 @@ export default function Index() {
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                 Supply Chain Experts, Automation Specialists
               </h2>
-              <p className="text-lg text-foreground/60">
+              <p className="text-lg text-foreground/60 mb-4">
                 Deep supply chain expertise combined with at-scale automation implementation.
                 We deliver transformative results that compound over time.
+              </p>
+              <p className="text-lg text-foreground/60">
+                We're technology-agnostic—choosing the most logical and sensible solutions for your specific challenges.
+                That might be agentic AI, RPA, custom workflows, or a combination tailored to your outcomes.
               </p>
             </div>
             <div className="hidden lg:block">
