@@ -110,15 +110,29 @@ export default function CaseStudies() {
       <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
-            {caseStudies.map((caseStudy, idx) => (
+            {caseStudies.map((caseStudy, idx) => {
+              const illustrations = [
+                InternationalLogisticsIllustration,
+                FulfillmentIllustration,
+                LastMileDeliveryIllustration,
+              ];
+              const Illustration = illustrations[idx];
+              return (
               <div
                 key={caseStudy.id}
-                className={`grid grid-cols-1 md:grid-cols-2 gap-8 pb-12 ${
+                className={`grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12 ${
                   idx < caseStudies.length - 1 ? "border-b border-border" : ""
                 }`}
               >
+                {/* Illustration */}
+                <div className="lg:col-span-1 flex items-center justify-center">
+                  <div className="w-full h-80 bg-gradient-to-b from-primary/5 to-primary/10 rounded-lg overflow-hidden">
+                    <Illustration className="w-full h-full" />
+                  </div>
+                </div>
+
                 {/* Left Side - Content */}
-                <div className="flex flex-col justify-between">
+                <div className="lg:col-span-2 flex flex-col justify-between">
                   <div>
                     <div className="flex items-start justify-between mb-4">
                       <div>
@@ -189,7 +203,8 @@ export default function CaseStudies() {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
