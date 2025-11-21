@@ -78,7 +78,7 @@ export default function Index() {
                 icon: Zap,
                 title: "Automation at Scale",
                 description:
-                  "We don't patch problems—we automate entire processes end-to-end. Our solutions handle real complexity and grow with you.",
+                  "We leverage the most logical and sensible tech solutions to solve your problems—whether agentic AI, RPA, workflow automation, or a combination. The technology serves your outcomes, not the other way around.",
               },
               {
                 icon: Users,
