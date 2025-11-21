@@ -9,14 +9,27 @@ import { AutomationOverlay } from "@/components/AutomationOverlay";
 export default function Index() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-white to-white pt-20 pb-32 md:pt-32 md:pb-48">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image and Automation Overlay */}
+      <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48 h-auto md:min-h-[600px]">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/257636/pexels-photo-257636.jpeg')",
+          }}
+        />
+
+        {/* Automation Overlay */}
+        <AutomationOverlay />
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl animate-slide-up">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
               Supply Chain Automation at Scale
             </h1>
-            <p className="text-lg md:text-xl text-foreground/70 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
               We're supply chain experts obsessed with automation that delivers real business outcomes.
               We don't just implement tools—we transform how you operate end-to-end, at scale.
             </p>
@@ -27,7 +40,7 @@ export default function Index() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20">
                 <Link to="/case-studies">See Our Results</Link>
               </Button>
             </div>
