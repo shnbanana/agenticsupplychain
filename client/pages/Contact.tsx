@@ -63,13 +63,26 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 via-white to-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-40 h-auto md:min-h-[500px]">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/5953713/pexels-photo-5953713.jpeg')",
+          }}
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               Let's Automate Your Supply Chain
             </h1>
-            <p className="text-lg text-foreground/60">
+            <p className="text-lg text-white/90 drop-shadow-md">
               Share your biggest supply chain challenge. We'll assess the opportunity, identify
               quick wins, and propose an automation roadmap to deliver real outcomes.
             </p>
