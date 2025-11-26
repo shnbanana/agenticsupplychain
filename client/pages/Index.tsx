@@ -1,9 +1,27 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Layout } from "@/components/Layout";
-import { ArrowRight, CheckCircle, Zap, Target, Users, Briefcase } from "lucide-react";
-import { SupplyChainNetworkIllustration, InternationalLogisticsIllustration, FulfillmentIllustration, LastMileDeliveryIllustration } from "@/components/SupplyChainIllustrations";
+import {
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Target,
+  Users,
+  Briefcase,
+} from "lucide-react";
+import {
+  SupplyChainNetworkIllustration,
+  InternationalLogisticsIllustration,
+  FulfillmentIllustration,
+  LastMileDeliveryIllustration,
+} from "@/components/SupplyChainIllustrations";
 import { AutomationOverlay } from "@/components/AutomationOverlay";
 
 export default function Index() {
@@ -30,8 +48,9 @@ export default function Index() {
               Supply Chain Automation at Scale
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
-              We're supply chain experts obsessed with automation that delivers real business outcomes.
-              We don't just implement tools—we transform how you operate end-to-end, at scale.
+              We're supply chain experts obsessed with automation that delivers
+              real business outcomes. We don't just implement tools—we transform
+              how you operate end-to-end, at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="gap-2">
@@ -40,7 +59,12 @@ export default function Index() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white/20">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-white/10 border-white text-white hover:bg-white/20"
+              >
                 <Link to="/case-studies">See Our Results</Link>
               </Button>
             </div>
@@ -57,12 +81,15 @@ export default function Index() {
                 Supply Chain Experts, Automation Specialists
               </h2>
               <p className="text-lg text-foreground/60 mb-4">
-                Deep supply chain expertise combined with at-scale automation implementation.
-                We deliver transformative results that compound over time.
+                Deep supply chain expertise combined with at-scale automation
+                implementation. We deliver transformative results that compound
+                over time.
               </p>
               <p className="text-lg text-foreground/60">
-                We're technology-agnostic—choosing the most logical and sensible solutions for your specific challenges.
-                That might be agentic AI, RPA, custom workflows, or a combination tailored to your outcomes.
+                We're technology-agnostic—choosing the most logical and sensible
+                solutions for your specific challenges. That might be agentic
+                AI, RPA, custom workflows, or a combination tailored to your
+                outcomes.
               </p>
             </div>
             <div className="hidden lg:block">
@@ -94,7 +121,9 @@ export default function Index() {
               <div key={idx} className="group">
                 <div className="flex flex-col items-start gap-4 p-6 rounded-lg border border-border/50 hover:border-accent hover:bg-accent/5 transition-all duration-300">
                   <item.icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground">
+                    {item.title}
+                  </h3>
                   <p className="text-foreground/60">{item.description}</p>
                 </div>
               </div>
@@ -111,8 +140,9 @@ export default function Index() {
               Supply Chain Transformations in Action
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              See how we've automated supply chain operations at scale, delivering millions in value
-              across international logistics, fulfillment, and last-mile operations.
+              See how we've automated supply chain operations at scale,
+              delivering millions in value across international logistics,
+              fulfillment, and last-mile operations.
             </p>
           </div>
 
@@ -121,29 +151,37 @@ export default function Index() {
               {
                 title: "International Logistics Network Automation",
                 company: "Global Retailer (500K SKUs, 40+ Countries)",
-                challenge: "Fragmented systems across 50+ suppliers, customs complexity, $8.2M annual waste",
-                result: "Real-time network visibility, 31% cost reduction, 38% faster cross-border fulfillment",
+                challenge:
+                  "Fragmented systems across 50+ suppliers, customs complexity, $8.2M annual waste",
+                result:
+                  "Real-time network visibility, 31% cost reduction, 38% faster cross-border fulfillment",
                 illustration: InternationalLogisticsIllustration,
               },
               {
                 title: "Fulfillment Center Operations Optimization",
                 company: "Omnichannel E-Commerce Leader (10 Facilities)",
-                challenge: "Manual workflows consuming 35% labor budget, 94% picking accuracy, 18-hour fulfillment",
-                result: "67% labor automation, 99.4% accuracy, 6-hour fulfillment, $4.1M annual savings",
+                challenge:
+                  "Manual workflows consuming 35% labor budget, 94% picking accuracy, 18-hour fulfillment",
+                result:
+                  "67% labor automation, 99.4% accuracy, 6-hour fulfillment, $4.1M annual savings",
                 illustration: FulfillmentIllustration,
               },
               {
                 title: "Middle & Last-Mile Delivery Network",
                 company: "Regional Logistics Operator (250+ Vehicles)",
-                challenge: "Fragmented routing, 26% failed deliveries, $12K daily operational waste",
-                result: "99.2% delivery success, 32% route efficiency, $3.6M annual savings",
+                challenge:
+                  "Fragmented routing, 26% failed deliveries, $12K daily operational waste",
+                result:
+                  "99.2% delivery success, 32% route efficiency, $3.6M annual savings",
                 illustration: LastMileDeliveryIllustration,
               },
               {
                 title: "Supply Chain Planning & Demand Intelligence",
                 company: "CPG Manufacturer (2,000+ SKUs)",
-                challenge: "Demand forecasting only 65% accurate, 28% excess safety stock, $2.1M waste",
-                result: "89% forecast accuracy, 30% inventory reduction, $2.8M annual freed working capital",
+                challenge:
+                  "Demand forecasting only 65% accurate, 28% excess safety stock, $2.1M waste",
+                result:
+                  "89% forecast accuracy, 30% inventory reduction, $2.8M annual freed working capital",
                 illustration: SupplyChainNetworkIllustration,
               },
             ].map((caseStudy, idx) => (
@@ -156,16 +194,26 @@ export default function Index() {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">{caseStudy.title}</CardTitle>
-                  <CardDescription className="mt-1">{caseStudy.company}</CardDescription>
+                  <CardDescription className="mt-1">
+                    {caseStudy.company}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4 flex-1">
                   <div>
-                    <p className="text-sm font-semibold text-foreground/70 mb-1">Challenge</p>
-                    <p className="text-sm text-foreground/60">{caseStudy.challenge}</p>
+                    <p className="text-sm font-semibold text-foreground/70 mb-1">
+                      Challenge
+                    </p>
+                    <p className="text-sm text-foreground/60">
+                      {caseStudy.challenge}
+                    </p>
                   </div>
                   <div className="pt-2 border-t border-border">
-                    <p className="text-sm font-semibold text-accent mb-1">Results</p>
-                    <p className="text-sm text-foreground">{caseStudy.result}</p>
+                    <p className="text-sm font-semibold text-accent mb-1">
+                      Results
+                    </p>
+                    <p className="text-sm text-foreground">
+                      {caseStudy.result}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -188,8 +236,8 @@ export default function Index() {
               World-Class Expertise
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              Our consultants bring decades of combined experience from leading tech companies,
-              startups, and transformation initiatives.
+              Our consultants bring decades of combined experience from leading
+              tech companies, startups, and transformation initiatives.
             </p>
           </div>
 
@@ -200,21 +248,33 @@ export default function Index() {
                 title: "Supply Chain Network Director",
                 experience:
                   "18+ years supply chain operations. Former VP at major logistics provider managing 1000+ facilities globally. Expert in international logistics, customs, and network optimization.",
-                specialties: ["International Logistics", "Network Design", "Cross-Border Ops"],
+                specialties: [
+                  "International Logistics",
+                  "Network Design",
+                  "Cross-Border Ops",
+                ],
               },
               {
                 name: "James Rodriguez",
                 title: "Automation & Fulfillment Lead",
                 experience:
                   "12 years fulfillment automation. Built robotic systems and automation platforms handling 500M+ units/year. Expert in large-scale fulfillment automation.",
-                specialties: ["Fulfillment Automation", "Robotics Integration", "WMS Systems"],
+                specialties: [
+                  "Fulfillment Automation",
+                  "Robotics Integration",
+                  "WMS Systems",
+                ],
               },
               {
                 name: "Emily Thompson",
                 title: "Last-Mile & Operations Lead",
                 experience:
                   "15+ years in last-mile and carrier operations. Led routing and delivery optimization for 3,000+ vehicles across North America.",
-                specialties: ["Last-Mile Delivery", "Route Optimization", "Driver Management"],
+                specialties: [
+                  "Last-Mile Delivery",
+                  "Route Optimization",
+                  "Driver Management",
+                ],
               },
             ].map((consultant, idx) => (
               <Card key={idx} className="border-border/50">
@@ -225,9 +285,13 @@ export default function Index() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-sm text-foreground/70">{consultant.experience}</p>
+                  <p className="text-sm text-foreground/70">
+                    {consultant.experience}
+                  </p>
                   <div className="space-y-2">
-                    <p className="text-xs font-semibold text-foreground/60 uppercase">Specializations</p>
+                    <p className="text-xs font-semibold text-foreground/60 uppercase">
+                      Specializations
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {consultant.specialties.map((specialty, i) => (
                         <span
@@ -259,8 +323,9 @@ export default function Index() {
             Automate Your Supply Chain at Scale
           </h2>
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-            Share your biggest supply chain challenge. We'll assess the opportunity and propose
-            a roadmap to automate and optimize end-to-end.
+            Share your biggest supply chain challenge. We'll assess the
+            opportunity and propose a roadmap to automate and optimize
+            end-to-end.
           </p>
           <Button asChild size="lg" variant="secondary" className="gap-2">
             <Link to="/contact">
