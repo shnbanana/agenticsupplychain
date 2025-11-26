@@ -343,7 +343,7 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="py-12 md:py-16 bg-primary/5 border-t border-slate-200/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
             Frequently Asked Questions
           </h2>
 
