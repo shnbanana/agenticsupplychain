@@ -50,8 +50,8 @@ export default function Index() {
 
       {/* Value Proposition */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/50">
-        <div className="container mx-auto px-4 mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                 Supply Chain Experts, Automation Specialists
