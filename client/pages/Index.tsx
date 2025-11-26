@@ -106,7 +106,7 @@ export default function Index() {
       {/* Case Studies Preview */}
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
               Supply Chain Transformations in Action
             </h2>
