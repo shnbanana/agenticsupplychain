@@ -69,7 +69,7 @@ export default function Contact() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/5953713/pexels-photo-5953713.jpeg')",
+              "url('https://images.pexels.com/photos/6169056/pexels-photo-6169056.jpeg')",
           }}
         />
 
