@@ -181,7 +181,7 @@ export default function Index() {
       </section>
 
       {/* Consultant Expertise */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white border-b border-slate-200/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
