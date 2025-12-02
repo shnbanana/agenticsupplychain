@@ -51,8 +51,7 @@ export const handleContactSubmission: RequestHandler = async (req, res) => {
     console.log("n8n webhook response status:", response.status);
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("n8n webhook error:", response.statusText, errorText);
+      console.error("n8n webhook error:", response.statusText);
       return res.status(500).json({
         success: false,
         message: "Failed to process submission",
