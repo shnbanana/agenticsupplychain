@@ -57,22 +57,12 @@ export default function Contact() {
       });
 
       console.log("Response status:", response.status);
-      const responseText = await response.text();
-      console.log("Response text:", responseText);
 
       if (!response.ok) {
-        let errorMsg = "Failed to submit form. Please try again.";
-        try {
-          const errorData = JSON.parse(responseText);
-          errorMsg = errorData.message || errorMsg;
-        } catch {
-          // Response is not JSON
-        }
-        console.error("API error:", errorMsg, "Status:", response.status);
-        throw new Error(errorMsg);
+        throw new Error("Failed to submit form. Please try again.");
       }
 
-      const responseData = JSON.parse(responseText);
+      const responseData = await response.json();
       console.log("API response:", responseData);
 
       toast({
