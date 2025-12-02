@@ -92,13 +92,21 @@ export default function CaseStudies() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 via-white to-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative py-12 md:py-16 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/34718922/pexels-photo-34718922.jpeg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Supply Chain Automation That Works
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Supply Chain Automation that Works
             </h1>
-            <p className="text-lg text-foreground/60">
+            <p className="text-lg text-white/90">
               Real supply chain transformations from real companies. See how Transformity automates
               international logistics, fulfillment operations, and last-mile delivery at scale.
             </p>
