@@ -163,9 +163,9 @@ export default function Contact() {
                         <p className="text-foreground/70">
                           San Francisco, CA
                           <br />
-                          New York, NY
+                          Los Angeles, CA
                           <br />
-                          Remote
+                          New York City, NY
                         </p>
                       </div>
                     </div>
