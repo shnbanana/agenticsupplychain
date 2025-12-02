@@ -1,8 +1,18 @@
 import { Layout } from "@/components/Layout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp, Clock, DollarSign, Users } from "lucide-react";
-import { InternationalLogisticsIllustration, FulfillmentIllustration, LastMileDeliveryIllustration } from "@/components/SupplyChainIllustrations";
+import {
+  InternationalLogisticsIllustration,
+  FulfillmentIllustration,
+  LastMileDeliveryIllustration,
+} from "@/components/SupplyChainIllustrations";
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -30,7 +40,8 @@ export default function CaseStudies() {
         "Documentation errors reduced from 15% to 0.2%, virtually eliminating delay-related fees",
         "Cross-border fulfillment time decreased from 18 days to 11 days end-to-end",
       ],
-      outcomes: "Global Retailer transformed international operations, reducing costs by $2.54M annually, improving on-time delivery to 98.8%, and cutting customs processing time by 95%. They now handle exponentially more cross-border volume with zero additional overhead.",
+      outcomes:
+        "Global Retailer transformed international operations, reducing costs by $2.54M annually, improving on-time delivery to 98.8%, and cutting customs processing time by 95%. They now handle exponentially more cross-border volume with zero additional overhead.",
     },
     {
       id: 2,
@@ -57,7 +68,8 @@ export default function CaseStudies() {
         "Daily labor costs reduced by $12,400 per facility through dynamic scheduling",
         "System uptime improved from 94% to 99.8%, eliminating operational bottlenecks",
       ],
-      outcomes: "E-Commerce Leader achieved $4.1M annual savings, transformed 10 facilities into highly efficient automated operations, reduced labor costs while handling 18% more volume, and achieved industry-leading 99.4% accuracy. Customer satisfaction improved significantly due to faster, more accurate fulfillment.",
+      outcomes:
+        "E-Commerce Leader achieved $4.1M annual savings, transformed 10 facilities into highly efficient automated operations, reduced labor costs while handling 18% more volume, and achieved industry-leading 99.4% accuracy. Customer satisfaction improved significantly due to faster, more accurate fulfillment.",
     },
     {
       id: 3,
@@ -85,7 +97,8 @@ export default function CaseStudies() {
         "Driver retention improved 35% due to better routes and earning potential",
         "Operational waste reduced from $12K to $3.1K daily",
       ],
-      outcomes: "Regional Logistics achieved 99.2% delivery success, saved $3.6M annually, improved driver satisfaction and retention, and became the most reliable last-mile provider in their region. The platform now handles real-time demand changes that were previously impossible to manage.",
+      outcomes:
+        "Regional Logistics achieved 99.2% delivery success, saved $3.6M annually, improved driver satisfaction and retention, and became the most reliable last-mile provider in their region. The platform now handles real-time demand changes that were previously impossible to manage.",
     },
   ];
 
@@ -107,8 +120,9 @@ export default function CaseStudies() {
               Supply Chain Automation that Works
             </h1>
             <p className="text-lg text-white/90">
-              Real supply chain transformations from real companies. See how Transformity automates
-              international logistics, fulfillment operations, and last-mile delivery at scale.
+              Real supply chain transformations from real companies. See how
+              Transformity automates international logistics, fulfillment
+              operations, and last-mile delivery at scale.
             </p>
           </div>
         </div>
@@ -123,13 +137,28 @@ export default function CaseStudies() {
             </h2>
             <div className="space-y-6 text-lg text-foreground/80">
               <p>
-                We don't start with technology. We start by deeply understanding your supply chain challenges—the systems, constraints, bottlenecks, and human factors that create your business problems. Through comprehensive analysis and industry expertise, we identify where automation and optimization create the highest impact.
+                We don't start with technology. We start by deeply understanding
+                your supply chain challenges—the systems, constraints,
+                bottlenecks, and human factors that create your business
+                problems. Through comprehensive analysis and industry expertise,
+                we identify where automation and optimization create the highest
+                impact.
               </p>
               <p>
-                Our solutions are built on an AI-first foundation, leveraging advanced algorithms, machine learning, and intelligent automation to drive measurable outcomes and long-term scale. We architect systems that continuously learn and improve, adapting to your evolving business needs.
+                Our solutions are built on an AI-first foundation, leveraging
+                advanced algorithms, machine learning, and intelligent
+                automation to drive measurable outcomes and long-term scale. We
+                architect systems that continuously learn and improve, adapting
+                to your evolving business needs.
               </p>
               <p>
-                That said, we're pragmatic. Not every problem needs AI. Sometimes the answer is intelligent business process redesign, better data integration, or strategic tooling. We recommend the most appropriate technology—whether that's agentic AI, traditional automation, or optimized workflows—based on what will truly solve your problem. Our goal is your success, not technology adoption for its own sake.
+                That said, we're pragmatic. Not every problem needs AI.
+                Sometimes the answer is intelligent business process redesign,
+                better data integration, or strategic tooling. We recommend the
+                most appropriate technology—whether that's agentic AI,
+                traditional automation, or optimized workflows—based on what
+                will truly solve your problem. Our goal is your success, not
+                technology adoption for its own sake.
               </p>
             </div>
           </div>
@@ -148,91 +177,119 @@ export default function CaseStudies() {
               ];
               const Illustration = illustrations[idx];
               return (
-              <div
-                key={caseStudy.id}
-                className={`grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12 ${
-                  idx < caseStudies.length - 1 ? "border-b border-border" : ""
-                }`}
-              >
-                {/* Illustration */}
-                <div className="lg:col-span-1 flex items-center justify-center">
-                  <div className="w-full h-80 bg-gradient-to-b from-primary/5 to-primary/10 rounded-lg overflow-hidden">
-                    <Illustration className="w-full h-full" />
-                  </div>
-                </div>
-
-                {/* Left Side - Content */}
-                <div className="lg:col-span-2 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h2 className="text-3xl font-bold text-foreground mb-2">
-                          {caseStudy.title}
-                        </h2>
-                        <p className="text-lg font-semibold text-primary mb-2">
-                          {caseStudy.company}
-                        </p>
-                      </div>
-                    </div>
-
-                    <Badge className="mb-4">{caseStudy.industry}</Badge>
-
-                    <div className="space-y-4 mb-8">
-                      <div>
-                        <h3 className="font-bold text-foreground mb-2">The Challenge</h3>
-                        <p className="text-foreground/70">{caseStudy.challenge}</p>
-                      </div>
-
-                      <div>
-                        <h3 className="font-bold text-foreground mb-2">Our Solution</h3>
-                        <p className="text-foreground/70">{caseStudy.solution}</p>
-                      </div>
-
-                      <div>
-                        <h3 className="font-bold text-foreground mb-3">Key Outcomes</h3>
-                        <ul className="space-y-2">
-                          {caseStudy.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-3">
-                              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                              <span className="text-foreground/70">{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="pt-4 border-t border-border">
-                        <p className="text-foreground text-sm italic">{caseStudy.outcomes}</p>
-                      </div>
+                <div
+                  key={caseStudy.id}
+                  className={`grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12 ${
+                    idx < caseStudies.length - 1 ? "border-b border-border" : ""
+                  }`}
+                >
+                  {/* Illustration */}
+                  <div className="lg:col-span-1 flex items-center justify-center">
+                    <div className="w-full h-80 bg-gradient-to-b from-primary/5 to-primary/10 rounded-lg overflow-hidden">
+                      <Illustration className="w-full h-full" />
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm text-foreground/60">
-                    <Clock className="w-4 h-4" />
-                    <span>{caseStudy.timeline}</span>
-                  </div>
-                </div>
+                  {/* Left Side - Content */}
+                  <div className="lg:col-span-2 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h2 className="text-3xl font-bold text-foreground mb-2">
+                            {caseStudy.title}
+                          </h2>
+                          <p className="text-lg font-semibold text-primary mb-2">
+                            {caseStudy.company}
+                          </p>
+                        </div>
+                      </div>
 
-                {/* Right Side - Results */}
-                <div className="lg:col-span-1">
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Results & Impact</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
-                    {caseStudy.results.map((result, i) => (
-                      <Card key={i} className="border-accent/20 bg-accent/5">
-                        <CardContent className="p-4">
-                          <div className="flex items-start justify-between mb-2">
-                            <p className="text-3xl font-bold text-accent">{result.metric}</p>
-                            {i === 0 && <TrendingUp className="w-5 h-5 text-accent" />}
-                            {i === 1 && <DollarSign className="w-5 h-5 text-accent" />}
-                            {i === 2 && <Clock className="w-5 h-5 text-accent" />}
-                            {i === 3 && <Users className="w-5 h-5 text-accent" />}
-                          </div>
-                          <p className="text-sm text-foreground/70">{result.label}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
+                      <Badge className="mb-4">{caseStudy.industry}</Badge>
+
+                      <div className="space-y-4 mb-8">
+                        <div>
+                          <h3 className="font-bold text-foreground mb-2">
+                            The Challenge
+                          </h3>
+                          <p className="text-foreground/70">
+                            {caseStudy.challenge}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="font-bold text-foreground mb-2">
+                            Our Solution
+                          </h3>
+                          <p className="text-foreground/70">
+                            {caseStudy.solution}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="font-bold text-foreground mb-3">
+                            Key Outcomes
+                          </h3>
+                          <ul className="space-y-2">
+                            {caseStudy.details.map((detail, i) => (
+                              <li key={i} className="flex items-start gap-3">
+                                <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                                <span className="text-foreground/70">
+                                  {detail}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="pt-4 border-t border-border">
+                          <p className="text-foreground text-sm italic">
+                            {caseStudy.outcomes}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-sm text-foreground/60">
+                      <Clock className="w-4 h-4" />
+                      <span>{caseStudy.timeline}</span>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Results */}
+                  <div className="lg:col-span-1">
+                    <h3 className="text-2xl font-bold text-foreground mb-6">
+                      Results & Impact
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
+                      {caseStudy.results.map((result, i) => (
+                        <Card key={i} className="border-accent/20 bg-accent/5">
+                          <CardContent className="p-4">
+                            <div className="flex items-start justify-between mb-2">
+                              <p className="text-3xl font-bold text-accent">
+                                {result.metric}
+                              </p>
+                              {i === 0 && (
+                                <TrendingUp className="w-5 h-5 text-accent" />
+                              )}
+                              {i === 1 && (
+                                <DollarSign className="w-5 h-5 text-accent" />
+                              )}
+                              {i === 2 && (
+                                <Clock className="w-5 h-5 text-accent" />
+                              )}
+                              {i === 3 && (
+                                <Users className="w-5 h-5 text-accent" />
+                              )}
+                            </div>
+                            <p className="text-sm text-foreground/70">
+                              {result.label}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
               );
             })}
           </div>
