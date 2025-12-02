@@ -81,7 +81,7 @@ export default function Consultants() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/6238186/pexels-photo-6238186.jpeg')",
+              "url('https://images.pexels.com/photos/7640766/pexels-photo-7640766.jpeg')",
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
