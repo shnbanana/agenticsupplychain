@@ -65,7 +65,8 @@ export default function Contact() {
 
       toast({
         title: "Success!",
-        description: "Your challenge has been submitted. We'll be in touch within 24 hours.",
+        description:
+          "Your challenge has been submitted. We'll be in touch within 24 hours.",
       });
       setSubmitted(true);
       reset();
@@ -74,7 +75,10 @@ export default function Contact() {
       console.error("Error submitting form:", error);
       toast({
         title: "Error",
-        description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Failed to submit form. Please try again.",
         variant: "destructive",
       });
     }
