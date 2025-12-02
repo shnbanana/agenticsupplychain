@@ -140,21 +140,6 @@ export default function Contact() {
                     </div>
 
                     <div className="flex gap-4">
-                      <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-foreground mb-1">
-                          Phone
-                        </p>
-                        <a
-                          href="tel:+14155551234"
-                          className="text-foreground/70 hover:text-primary transition-colors"
-                        >
-                          +1 (415) 555-1234
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
                       <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-foreground mb-1">
