@@ -1,6 +1,7 @@
 import { RequestHandler } from "express";
 
-const N8N_WEBHOOK_URL = "https://transformity.app.n8n.cloud/webhook/3fbdf378-7560-4bae-a640-7db90600a7a1";
+const N8N_WEBHOOK_URL =
+  "https://transformity.app.n8n.cloud/webhook/3fbdf378-7560-4bae-a640-7db90600a7a1";
 
 interface ContactFormData {
   name: string;
@@ -17,7 +18,15 @@ export const handleContactSubmission: RequestHandler = async (req, res) => {
     const formData: ContactFormData = req.body;
 
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.company || !formData.industry || !formData.challenge || !formData.budget || !formData.timeline) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.company ||
+      !formData.industry ||
+      !formData.challenge ||
+      !formData.budget ||
+      !formData.timeline
+    ) {
       return res.status(400).json({
         success: false,
         message: "Missing required fields",
