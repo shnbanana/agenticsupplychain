@@ -76,13 +76,21 @@ export default function Consultants() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 via-white to-white py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="relative py-12 md:py-16 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/7491159/pexels-photo-7491159.jpeg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Supply Chain Experts
             </h1>
-            <p className="text-lg text-foreground/60">
+            <p className="text-lg text-white/90">
               The Transformity team combines 150+ years of supply chain expertise. Our consultants
               have built, scaled, and optimized operations handling 500M+ units annually.
               Deep knowledge of international logistics, fulfillment, and last-mile delivery.
