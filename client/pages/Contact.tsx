@@ -48,13 +48,7 @@ export default function Contact() {
   const onSubmit = async (data: ContactFormData) => {
     try {
       console.log("Submitting form data:", data);
-      // Use Netlify functions in production, API endpoint in development
-      const endpoint = import.meta.env.PROD
-        ? "/.netlify/functions/contact"
-        : "/api/contact";
-      console.log("Using endpoint:", endpoint);
-
-      const response = await fetch(endpoint, {
+      const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
