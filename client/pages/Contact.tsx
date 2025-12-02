@@ -131,10 +131,10 @@ export default function Contact() {
                           Email
                         </p>
                         <a
-                          href="mailto:hello@transformai.com"
+                          href="mailto:hello@agenticsupplychain.com"
                           className="text-foreground/70 hover:text-primary transition-colors"
                         >
-                          hello@transformai.com
+                          hello@agenticsupplychain.com
                         </a>
                       </div>
                     </div>
