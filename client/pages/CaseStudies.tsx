@@ -114,6 +114,28 @@ export default function CaseStudies() {
         </div>
       </section>
 
+      {/* Our Approach */}
+      <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              How We Build Supply Chain Solutions
+            </h2>
+            <div className="space-y-6 text-lg text-foreground/80">
+              <p>
+                We don't start with technology. We start by deeply understanding your supply chain challenges—the systems, constraints, bottlenecks, and human factors that create your business problems. Through comprehensive analysis and industry expertise, we identify where automation and optimization create the highest impact.
+              </p>
+              <p>
+                Our solutions are built on an AI-first foundation, leveraging advanced algorithms, machine learning, and intelligent automation to drive measurable outcomes and long-term scale. We architect systems that continuously learn and improve, adapting to your evolving business needs.
+              </p>
+              <p>
+                That said, we're pragmatic. Not every problem needs AI. Sometimes the answer is intelligent business process redesign, better data integration, or strategic tooling. We recommend the most appropriate technology—whether that's agentic AI, traditional automation, or optimized workflows—based on what will truly solve your problem. Our goal is your success, not technology adoption for its own sake.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies */}
       <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
