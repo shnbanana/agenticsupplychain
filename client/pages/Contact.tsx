@@ -35,6 +35,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const { toast } = useToast();
   const {
     register,
     handleSubmit,
@@ -46,6 +47,7 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
+      console.log("Submitting form data:", data);
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -54,15 +56,27 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
+      const responseData = await response.json();
+      console.log("API response:", responseData);
+
       if (!response.ok) {
-        throw new Error("Failed to submit form");
+        throw new Error(responseData.message || "Failed to submit form");
       }
 
+      toast({
+        title: "Success!",
+        description: "Your challenge has been submitted. We'll be in touch within 24 hours.",
+      });
       setSubmitted(true);
       reset();
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
+        variant: "destructive",
+      });
     }
   };
 
