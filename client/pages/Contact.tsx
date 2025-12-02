@@ -48,7 +48,13 @@ export default function Contact() {
   const onSubmit = async (data: ContactFormData) => {
     try {
       console.log("Submitting form data:", data);
-      const response = await fetch("/.netlify/functions/contact", {
+      // Use Netlify functions in production, API endpoint in development
+      const endpoint = import.meta.env.PROD
+        ? "/.netlify/functions/contact"
+        : "/api/contact";
+      console.log("Using endpoint:", endpoint);
+
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,6 +65,7 @@ export default function Contact() {
       console.log("Response status:", response.status);
 
       if (!response.ok) {
+        console.error("API responded with status:", response.status);
         throw new Error("Failed to submit form. Please try again.");
       }
 
