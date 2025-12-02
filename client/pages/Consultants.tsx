@@ -1,5 +1,11 @@
 import { Layout } from "@/components/Layout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Brain, Code, Zap } from "lucide-react";
 
 export default function Consultants() {
@@ -45,7 +51,10 @@ export default function Consultants() {
               Supply Chain Experts
             </h1>
             <p className="text-lg text-white/90">
-              The Transformity team combines 150+ years of supply chain expertise. Our team have built, scaled, and optimized operations with deep knowledge of international logistics, fulfillment, network management and last-mile delivery.
+              The Transformity team combines 150+ years of supply chain
+              expertise. Our team have built, scaled, and optimized operations
+              with deep knowledge of international logistics, fulfillment,
+              network management and last-mile delivery.
             </p>
           </div>
         </div>
@@ -64,7 +73,9 @@ export default function Consultants() {
                 Embedded Partnership
               </h3>
               <p className="text-foreground/70">
-                We work as an extension of your team, embedded in daily operations and decisions. You get direct access to senior consultants, not junior staff.
+                We work as an extension of your team, embedded in daily
+                operations and decisions. You get direct access to senior
+                consultants, not junior staff.
               </p>
             </div>
 
@@ -73,7 +84,9 @@ export default function Consultants() {
                 Knowledge Transfer
               </h3>
               <p className="text-foreground/70">
-                We believe in building capability within your organization. Every consultant invests in transferring knowledge and developing your team.
+                We believe in building capability within your organization.
+                Every consultant invests in transferring knowledge and
+                developing your team.
               </p>
             </div>
 
@@ -82,7 +95,9 @@ export default function Consultants() {
                 Outcome Accountability
               </h3>
               <p className="text-foreground/70">
-                Our success is measured by your success. We align on clear outcomes and take responsibility for delivering measurable business results.
+                Our success is measured by your success. We align on clear
+                outcomes and take responsibility for delivering measurable
+                business results.
               </p>
             </div>
           </div>
@@ -123,17 +138,27 @@ export default function Consultants() {
               A Team of Technologists and Operators
             </h2>
             <p className="text-lg text-foreground/70">
-              We are a team of technologists and operators who have worked hands-on in companies across the board—from some of the largest and most innovative eCommerce and logistics providers in the supply chain. Our experience spans building systems at scale, leading operations through transformation, and implementing solutions that solve real business problems.
+              We are a team of technologists and operators who have worked
+              hands-on in companies across the board—from some of the largest
+              and most innovative eCommerce and logistics providers in the
+              supply chain. Our experience spans building systems at scale,
+              leading operations through transformation, and implementing
+              solutions that solve real business problems.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {consultants.map((consultant) => (
-              <Card key={consultant.id} className="border-border/50 overflow-hidden hover:shadow-lg transition-shadow">
+              <Card
+                key={consultant.id}
+                className="border-border/50 overflow-hidden hover:shadow-lg transition-shadow"
+              >
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <CardTitle className="text-2xl mb-2">{consultant.name}</CardTitle>
+                      <CardTitle className="text-2xl mb-2">
+                        {consultant.name}
+                      </CardTitle>
                       <CardDescription className="text-accent font-semibold text-base">
                         {consultant.title}
                       </CardDescription>
