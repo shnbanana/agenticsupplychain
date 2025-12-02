@@ -45,7 +45,7 @@ export default function Consultants() {
               Supply Chain Experts
             </h1>
             <p className="text-lg text-white/90">
-              The Transformity team combines 150+ years of supply chain expertise. Our consultants have built, scaled, and optimized operations handling 500M+ units annually. Deep knowledge of international logistics, fulfillment, and last-mile delivery.
+              The Transformity team combines 150+ years of supply chain expertise. Our team have built, scaled, and optimized operations with deep knowledge of international logistics, fulfillment, network management and last-mile delivery.
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function Consultants() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white border-b border-slate-200/50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
