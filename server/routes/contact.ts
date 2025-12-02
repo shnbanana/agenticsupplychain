@@ -16,6 +16,7 @@ interface ContactFormData {
 export const handleContactSubmission: RequestHandler = async (req, res) => {
   try {
     const formData: ContactFormData = req.body;
+    console.log("Received contact form data:", formData);
 
     // Validate required fields
     if (
@@ -27,6 +28,7 @@ export const handleContactSubmission: RequestHandler = async (req, res) => {
       !formData.budget ||
       !formData.timeline
     ) {
+      console.warn("Missing required fields:", formData);
       return res.status(400).json({
         success: false,
         message: "Missing required fields",
@@ -34,6 +36,7 @@ export const handleContactSubmission: RequestHandler = async (req, res) => {
     }
 
     // Forward the data to n8n webhook
+    console.log("Forwarding to n8n webhook...");
     const response = await fetch(N8N_WEBHOOK_URL, {
       method: "POST",
       headers: {
@@ -45,14 +48,18 @@ export const handleContactSubmission: RequestHandler = async (req, res) => {
       }),
     });
 
+    console.log("n8n webhook response status:", response.status);
+
     if (!response.ok) {
-      console.error("n8n webhook error:", response.statusText);
+      const errorText = await response.text();
+      console.error("n8n webhook error:", response.statusText, errorText);
       return res.status(500).json({
         success: false,
         message: "Failed to process submission",
       });
     }
 
+    console.log("Form successfully submitted to n8n");
     res.status(200).json({
       success: true,
       message: "Form submitted successfully",
