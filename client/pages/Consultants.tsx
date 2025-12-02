@@ -1,5 +1,11 @@
 import { Layout } from "@/components/Layout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Code, Zap } from "lucide-react";
 
@@ -91,9 +97,10 @@ export default function Consultants() {
               Supply Chain Experts
             </h1>
             <p className="text-lg text-white/90">
-              The Transformity team combines 150+ years of supply chain expertise. Our consultants
-              have built, scaled, and optimized operations handling 500M+ units annually.
-              Deep knowledge of international logistics, fulfillment, and last-mile delivery.
+              The Transformity team combines 150+ years of supply chain
+              expertise. Our consultants have built, scaled, and optimized
+              operations handling 500M+ units annually. Deep knowledge of
+              international logistics, fulfillment, and last-mile delivery.
             </p>
           </div>
         </div>
@@ -104,27 +111,41 @@ export default function Consultants() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {consultants.map((consultant) => (
-              <Card key={consultant.id} className="border-border/50 overflow-hidden hover:shadow-lg transition-shadow">
+              <Card
+                key={consultant.id}
+                className="border-border/50 overflow-hidden hover:shadow-lg transition-shadow"
+              >
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <CardTitle className="text-2xl mb-2">{consultant.name}</CardTitle>
+                      <CardTitle className="text-2xl mb-2">
+                        {consultant.name}
+                      </CardTitle>
                       <CardDescription className="text-accent font-semibold text-base">
                         {consultant.title}
                       </CardDescription>
                     </div>
                     <consultant.icon className="w-8 h-8 text-accent flex-shrink-0" />
                   </div>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{consultant.bio}</p>
+                  <p className="text-sm text-foreground/70 leading-relaxed">
+                    {consultant.bio}
+                  </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* Experience */}
                   <div>
-                    <h4 className="font-bold text-foreground mb-3">Key Experience</h4>
+                    <h4 className="font-bold text-foreground mb-3">
+                      Key Experience
+                    </h4>
                     <ul className="space-y-2">
                       {consultant.experience.map((exp, i) => (
-                        <li key={i} className="flex gap-3 text-sm text-foreground/70">
-                          <span className="text-accent font-bold flex-shrink-0">•</span>
+                        <li
+                          key={i}
+                          className="flex gap-3 text-sm text-foreground/70"
+                        >
+                          <span className="text-accent font-bold flex-shrink-0">
+                            •
+                          </span>
                           <span>{exp}</span>
                         </li>
                       ))}
@@ -133,7 +154,9 @@ export default function Consultants() {
 
                   {/* Expertise */}
                   <div>
-                    <h4 className="font-bold text-foreground mb-3">Expertise</h4>
+                    <h4 className="font-bold text-foreground mb-3">
+                      Expertise
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {consultant.expertise.map((skill, i) => (
                         <Badge key={i} variant="secondary">
@@ -145,7 +168,9 @@ export default function Consultants() {
 
                   {/* Companies */}
                   <div>
-                    <h4 className="font-bold text-foreground mb-3 text-sm">Companies</h4>
+                    <h4 className="font-bold text-foreground mb-3 text-sm">
+                      Companies
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {consultant.companies.map((company, i) => (
                         <span
@@ -173,26 +198,35 @@ export default function Consultants() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg border border-border/50">
-              <h3 className="text-xl font-bold text-foreground mb-4">Embedded Partnership</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Embedded Partnership
+              </h3>
               <p className="text-foreground/70">
-                We work as an extension of your team, embedded in daily operations and decisions.
-                You get direct access to senior consultants, not junior staff.
+                We work as an extension of your team, embedded in daily
+                operations and decisions. You get direct access to senior
+                consultants, not junior staff.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg border border-border/50">
-              <h3 className="text-xl font-bold text-foreground mb-4">Knowledge Transfer</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Knowledge Transfer
+              </h3>
               <p className="text-foreground/70">
-                We believe in building capability within your organization. Every consultant
-                invests in transferring knowledge and developing your team.
+                We believe in building capability within your organization.
+                Every consultant invests in transferring knowledge and
+                developing your team.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg border border-border/50">
-              <h3 className="text-xl font-bold text-foreground mb-4">Outcome Accountability</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Outcome Accountability
+              </h3>
               <p className="text-foreground/70">
-                Our success is measured by your success. We align on clear outcomes and take
-                responsibility for delivering measurable business results.
+                Our success is measured by your success. We align on clear
+                outcomes and take responsibility for delivering measurable
+                business results.
               </p>
             </div>
           </div>
@@ -205,7 +239,9 @@ export default function Consultants() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-4xl font-bold text-primary mb-2">150+</p>
-              <p className="text-foreground/60">Years Supply Chain Experience</p>
+              <p className="text-foreground/60">
+                Years Supply Chain Experience
+              </p>
             </div>
             <div>
               <p className="text-4xl font-bold text-primary mb-2">3</p>
